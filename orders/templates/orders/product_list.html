@@ -1,0 +1,65 @@
+{% extends 'orders/base.html' %}
+
+{% block content %}
+    {{ message }}
+    <div class="row">
+    {% for object in object_list %}
+        <div class="col-sm-3 products">
+            {% if object.order_name %}
+                <h5 class="text-info"><strong>{{ object.order_name }}</strong></h5>
+
+                <p>Toppings: <select class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <option>Pepperoni</option>
+                                <option>Sausage</option>
+                                <option>Pineapple</option>
+                                <option>Mushrooms</option>
+                                <option>Onions</option>
+                                <option>Ham</option>
+                                <option>Canadian Bacon</option>
+                                <option>Pineapple</option>
+                                <option>Eggplant</option>
+                                <option>Tomato & Basil</option>
+                                <option>Hamburger</option>
+                                <option>Spinach</option>
+                                <option>Artichoke</option>
+                                <option>Buffalo Chicken</option>
+                                <option>Barbecue Chicken</option>
+                                <option>Anchovies</option>
+                                <option>Black Olives</option>
+                                <option>Fresh Garlic</option>
+                                <option>Zucchini</option>
+                            </select>
+                </p>
+            {% endif %}
+            {% if object.order_subs %}
+                <h5 class="text-info"><strong>{{ object.order_subs }}</strong></h5>
+                <p>Addings: <select class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                <option>Mushrooms</option>
+                                <option>Green Peppers</option>
+                                <option>Onions</option>
+                            </select>
+                </p>
+            {% else %}
+                <h5 class="text-info"><strong>{{ object.other_order_name }}</strong></h5>
+            {% endif %}
+
+            <p>Size: <strong>{{ object.size }}</strong>
+            <p>Price: <strong>${{ object.price }}</strong></p>
+            <p>Item: <strong>{{ object.order_item }}</strong></p><br>
+
+            <p><a href="{% url 'orders:add_to_cart' object.id %}" class="btn btn-warning">Add to Cart</a></p><br>
+        </div>
+    {% endfor %}
+    <style type="text/css">
+        .products {
+            border: 1px solid white;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-width: 10px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+    </div>
+
+{% endblock content %}

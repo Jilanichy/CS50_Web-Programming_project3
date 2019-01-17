@@ -1,0 +1,14 @@
+{% extends 'orders/base.html' %}
+
+{% block title %} Pizza {% endblock %}
+
+{% block content %}
+
+    <div class="jumbotron">
+      <h4 class="display-4">Hello,{% if user.is_authenticated %} {{ user.username }}! {% endif %}</h4><br>
+      <p class="lead">Welcome to Pinocchio's Pizza & Subs. To see our Delicious Food Products go to Menu.</p>
+      <hr class="my-4">
+      <p class="lead">We provide the best Pizza out there! Also Pasta, Salad, Dinner Platters too.</p>
+    </div>
+
+{% endblock %}

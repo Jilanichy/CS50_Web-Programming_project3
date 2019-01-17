@@ -1,0 +1,20 @@
+{% extends 'orders/base.html' %}
+
+{% block content %}
+<h2 class="text-center">Registration Form</h2>
+
+<div class="col-md-6 offset-md-3">
+    <form method="POST" action="{% url 'orders:registration' %}">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            <p>Invalid Credentials</p>
+        {% endif %}
+            {{ form.as_p }}
+        <input type="submit" value="Registration" class="btn btn-primary">
+    </form>
+    <br>
+</div>
+
+
+{% endblock %}

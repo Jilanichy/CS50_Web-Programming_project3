@@ -1,0 +1,19 @@
+{% extends 'orders/base.html' %}
+
+{% block content %}
+
+    <h2 class="text-center">Login Form</h2>
+    <div class="col-md-6 offset-md-3">
+        <form method="POST">
+                {% csrf_token %}
+            <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter Username" name="username"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" placeholder="Enter Password" name="password"/>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+
+{% endblock %}
