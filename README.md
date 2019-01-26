@@ -1,9 +1,9 @@
 # Project 3 - Pizza
 
-## Web Programming with Python and JavaScript
+## Web Programming with Python and JavaScript (HarvardX)
 
-<b>Language Choice:</b> Python, JavaScript
-<b>Frameworks:</b> Django, Bootstrap
+<b>Language Choice:</b> Python, JavaScript <br>
+<b>Frameworks:</b> Django, Bootstrap <br>
 <b>API:</b> Stripe
 
 * Leveraging Django's full Authentication system.
@@ -21,5 +21,3 @@
 * Site administrators can able to see orders from root admin panel.
 
 * My Personal Touch is - 'Stripe API', a user can make a purchase by using credit card.
-
-* For testing purpose, Admin name: <b>josef</b> Password: <b>django12</b>
