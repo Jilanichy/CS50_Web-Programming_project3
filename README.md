@@ -21,3 +21,5 @@
 * Site administrators can able to see orders from root admin panel.
 
 * My Personal Touch is - 'Stripe API', a user can make a purchase by using credit card.
+
+* Quick Walkthrough - https://www.youtube.com/watch?v=IXNQRHuWtHw
